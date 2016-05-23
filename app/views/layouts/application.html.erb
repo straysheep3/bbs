@@ -20,7 +20,18 @@
         <!-- original content goes in this container -->
         <div class="off-canvas-content" data-off-canvas-content>
           <div class="row">
-            <%= yield %>
+            <div class="small-12 medium-9 columns">
+              <%= yield %>
+            </div>
+            <div class="small-12 medium-3 columns callout">
+              <%= render "shared/sidebar" %>
+            </div>
+          </div>
+
+          <div class="row expanded">
+            <div class="small-12 columns text-center">
+              <p>©mokumoku online</p>
+            </div>
           </div>
         </div>
 
