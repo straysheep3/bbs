@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Bbs</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+        <%= render "shared/header" %>
+
+        <!-- original content goes in this container -->
+        <div class="off-canvas-content" data-off-canvas-content>
+          <div class="row">
+            <%= yield %>
+          </div>
+        </div>
+
+      <!-- close wrapper, no more content after this -->
+      </div>
+    </div>
+
+  </body>
 </html>
