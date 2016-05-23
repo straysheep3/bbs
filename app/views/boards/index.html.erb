@@ -1,72 +1,14 @@
 <div class="row">
+  <% @rooms.each do |room| %>
   <div class="small-12 medium-4 columns">
     <div class="callout">
       <img src="http://placehold.jp/400x200.png" alt="" />
-      <h3>title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil enim iam habes, quod ad corpus referas; At ille pellit, qui permulcet sensum voluptate.</p>
+      <h3><%= room.title %></h3>
+      <p><%= room.description %></p>
       <p class="text-right">
-        <%= link_to "into the room.", "boards/show", class: "button primary" %>
+        <%= link_to room.title + "へ入る", "/boards/#{room.id}", class: "button primary" %>
       </p>
     </div>
   </div>
-  <div class="small-12 medium-4 columns">
-    <div class="callout">
-      <img src="http://placehold.jp/400x200.png" alt="" />
-      <h3>title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil enim iam habes, quod ad corpus referas; At ille pellit, qui permulcet sensum voluptate.</p>
-    </div>
-  </div>
-  <div class="small-12 medium-4 columns">
-    <div class="callout">
-      <img src="http://placehold.jp/400x200.png" alt="" />
-      <h3>title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil enim iam habes, quod ad corpus referas; At ille pellit, qui permulcet sensum voluptate.</p>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="small-12 medium-4 columns">
-    <div class="callout">
-      <img src="http://placehold.jp/400x200.png" alt="" />
-      <h3>title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil enim iam habes, quod ad corpus referas; At ille pellit, qui permulcet sensum voluptate.</p>
-    </div>
-  </div>
-  <div class="small-12 medium-4 columns">
-    <div class="callout">
-      <img src="http://placehold.jp/400x200.png" alt="" />
-      <h3>title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil enim iam habes, quod ad corpus referas; At ille pellit, qui permulcet sensum voluptate.</p>
-    </div>
-  </div>
-  <div class="small-12 medium-4 columns">
-    <div class="callout">
-      <img src="http://placehold.jp/400x200.png" alt="" />
-      <h3>title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil enim iam habes, quod ad corpus referas; At ille pellit, qui permulcet sensum voluptate.</p>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="small-12 medium-4 columns">
-    <div class="callout">
-      <img src="http://placehold.jp/400x200.png" alt="" />
-      <h3>title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil enim iam habes, quod ad corpus referas; At ille pellit, qui permulcet sensum voluptate.</p>
-    </div>
-  </div>
-  <div class="small-12 medium-4 columns">
-    <div class="callout">
-      <img src="http://placehold.jp/400x200.png" alt="" />
-      <h3>title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil enim iam habes, quod ad corpus referas; At ille pellit, qui permulcet sensum voluptate.</p>
-    </div>
-  </div>
-  <div class="small-12 medium-4 columns">
-    <div class="callout">
-      <img src="http://placehold.jp/400x200.png" alt="" />
-      <h3>title</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nihil enim iam habes, quod ad corpus referas; At ille pellit, qui permulcet sensum voluptate.</p>
-    </div>
-  </div>
+  <% end %>
 </div>

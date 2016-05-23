@@ -1,7 +1,8 @@
+<%= link_to "back to top page", "/boards" %>
 <div class="row">
-  <div class="small-12 medium-7 columns">
-    <h2>title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si longus, levis dictata sunt. Odium autem et invidiam facile vitabis. Nondum autem explanatum satis, erat, quid maxime natura vellet. In qua quid est boni praeter summam voluptatem, et eam sempiternam? Duo Reges: constructio interrete. Atqui, inquam, Cato, si istud optinueris, traducas me ad te totum licebit. Summum ením bonum exposuit vacuitatem doloris;</p>
+  <div class="small-12 columns">
+    <h2><%= @room.title %></h2>
+    <p><%= @room.description %></p>
     <hr>
     <div class="callout">
       <ul class="menu vertical">
