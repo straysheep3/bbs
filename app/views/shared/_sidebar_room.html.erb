@@ -3,4 +3,8 @@
   <li><a href="#">http://~~~</a></li>
   <hr>
 </ul>
-以下に画面内編集用のフォームを生成。
+<%= form_tag "/", method: :post do %>
+  投稿者名: <%= text_field_tag :user %>
+  投稿内容: <%= text_field_tag :comment %>
+  <%= submit_tag %>
+<% end %>

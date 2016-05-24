@@ -5,11 +5,12 @@
     <p><%= @room.description %></p>
     <hr>
     <div class="callout">
+      <% @posts.each do |post| %>
       <ul class="menu vertical">
-        <li>Item One</li>
-        <li>Item Two</li>
-        <li>Item Three</li>
+        <li><%= post.user %></li>
+        <li><%= post.comment %></li>
       </ul>
+      <% end %>
     </div>
   </div>
 </div>

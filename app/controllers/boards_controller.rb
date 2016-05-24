@@ -1,14 +1,17 @@
 class BoardsController < ApplicationController
   def index
     @rooms = Room.all
+    @posts = Post.all
   end
 
   def new
     @room = Room.new
+    @post = Post.new
   end
 
   def show
     @room = Room.find(params[:id])
+    @posts = Post.all
     render :layout => "room"
   end
 
